@@ -31,9 +31,11 @@ class WelcomeController extends Controller
 				return $this->redirect($this->generateUrl('welcome_success'));
 			}
 		}
-	
+		
+		$route = $this->getRequest()->attributes->get('_route');
 		return $this->render('AcmeDemoBundle:Welcome:index.html.twig', array(
 			'form' => $form->createView(),
+			'route' => $route,
 		));
 
     }

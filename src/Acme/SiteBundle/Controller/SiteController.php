@@ -14,11 +14,13 @@ class SiteController extends Controller
 	
 	public function companyAction()
     {
-        return $this->render('AcmeSiteBundle:Site:company.html.twig');
+        $route = $this->getRequest()->attributes->get('_route');
+		return $this->render('AcmeSiteBundle:Site:company.html.twig', array('route' => $route));
     }
 	
 	public function contactsAction()
     {
-        return $this->render('AcmeSiteBundle:Site:contacts.html.twig');
+        $route = $this->getRequest()->attributes->get('_route');
+		return $this->render('AcmeSiteBundle:Site:contacts.html.twig', array('route' => $route));
     }
 }

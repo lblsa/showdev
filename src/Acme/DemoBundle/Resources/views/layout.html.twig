@@ -21,6 +21,25 @@
 					<li><a href="{{path('company')}}">О нас</a></li>
 					<li><a href="{{path('contacts')}}">Контакты</a></li>
 				</ul>
+				
+				<script type="text/javascript">
+					$('ul li').each(function(i){
+						$(this).attr('class', '');
+						{% if route == '_welcome' %}
+							if($(this).index()==0)
+								$(this).attr('class', 'active');
+						{% endif %}
+						{% if route == 'company' %}
+							if($(this).index()==1)
+								$(this).attr('class', 'active');
+						{% endif %}
+						{% if route == 'contacts' %}
+							if($(this).index()==2)
+								$(this).attr('class', 'active');
+						{% endif %}
+					});
+				</script>
+				
                 {#<form id="symfony-search" method="GET" action="http://symfony.com/search">
                     <label for="symfony-search-field"><span>Search on Symfony Website</span></label>
                     <input name="q" id="symfony-search-field" type="search" placeholder="Search on Symfony website" class="medium_txt" />
