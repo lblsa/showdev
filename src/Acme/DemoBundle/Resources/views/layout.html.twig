@@ -6,6 +6,7 @@
         <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
         <link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/demo.css') }}" />
         <link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/form.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/style.css') }}" />
     </head>
     <body>
         <div id="symfony-wrapper">
@@ -13,11 +14,16 @@
                 <a href="{{ path('_welcome') }}">
                     <img src="{{ asset('bundles/acmedemo/images/logo.gif') }}" alt="Symfony logo" />
                 </a>
-                <form id="symfony-search" method="GET" action="http://symfony.com/search">
+				<ul class="main_menu">
+					<li class="active"><a href="#">Главная</a></li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+                {#<form id="symfony-search" method="GET" action="http://symfony.com/search">
                     <label for="symfony-search-field"><span>Search on Symfony Website</span></label>
                     <input name="q" id="symfony-search-field" type="search" placeholder="Search on Symfony website" class="medium_txt" />
                     <input type="submit" class="symfony-button-grey" value="OK" />
-                </form>
+                </form>#}
             </div>
 
             {% for flashMessage in app.session.flashbag.get('notice') %}
