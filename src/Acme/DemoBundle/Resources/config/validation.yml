@@ -1,0 +1,8 @@
+Acme\DemoBundle\Entity\SignUp:
+    properties:
+        mail:
+            - Email: { message: "Данные не являются e-mail адресом!" }
+            - NotBlank: ~
+        phone:
+            - MinLength: { limit: 11, message: "Телефонный номер должен содержать 11 цифр!" }
+            - MaxLength: { limit: 11, message: "Телефонный номер должен содержать 11 цифр!" }	
