@@ -8,7 +8,11 @@ company:
    
 index:
    pattern:   /site/index/
-   defaults:  { _controller: AcmeSiteBundle:Site:index }   
+   defaults:  { _controller: AcmeSiteBundle:Site:index }
+   
+contacts:
+   pattern:   /site/contacts/
+   defaults:  { _controller: AcmeSiteBundle:Site:contacts }   
    
 welcome_index:
    pattern:   /

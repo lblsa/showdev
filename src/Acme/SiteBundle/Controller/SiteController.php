@@ -16,4 +16,9 @@ class SiteController extends Controller
     {
         return $this->render('AcmeSiteBundle:Site:company.html.twig');
     }
+	
+	public function contactsAction()
+    {
+        return $this->render('AcmeSiteBundle:Site:contacts.html.twig');
+    }
 }
