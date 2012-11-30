@@ -5,6 +5,10 @@
         <title>{% block title %}Demo Bundle{% endblock %}</title>
         <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
         <link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/demo.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/form.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/style.css') }}" />
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     </head>
     <body>
         <div id="symfony-wrapper">
@@ -12,11 +16,35 @@
                 <a href="{{ path('_welcome') }}">
                     <img src="{{ asset('bundles/acmedemo/images/logo.gif') }}" alt="Symfony logo" />
                 </a>
-                <form id="symfony-search" method="GET" action="http://symfony.com/search">
+				<ul class="main_menu">
+					<li class="active"><a href="{{path('welcome_success')}}">Главная</a></li>
+					<li><a href="{{path('company')}}">О нас</a></li>
+					<li><a href="{{path('contacts')}}">Контакты</a></li>
+				</ul>
+				
+				<script type="text/javascript">
+					$('ul li').each(function(i){
+						$(this).attr('class', '');
+						{% if route == '_welcome' %}
+							if($(this).index()==0)
+								$(this).attr('class', 'active');
+						{% endif %}
+						{% if route == 'company' %}
+							if($(this).index()==1)
+								$(this).attr('class', 'active');
+						{% endif %}
+						{% if route == 'contacts' %}
+							if($(this).index()==2)
+								$(this).attr('class', 'active');
+						{% endif %}
+					});
+				</script>
+				
+                {#<form id="symfony-search" method="GET" action="http://symfony.com/search">
                     <label for="symfony-search-field"><span>Search on Symfony Website</span></label>
                     <input name="q" id="symfony-search-field" type="search" placeholder="Search on Symfony website" class="medium_txt" />
                     <input type="submit" class="symfony-button-grey" value="OK" />
-                </form>
+                </form>#}
             </div>
 
             {% for flashMessage in app.session.flashbag.get('notice') %}

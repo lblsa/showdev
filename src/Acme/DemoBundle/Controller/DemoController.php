@@ -26,8 +26,18 @@ class DemoController extends Controller
      * @Template()
      */
     public function helloAction($name)
+    {		
+		return array('name' => $name);
+    }
+	
+    public function testAction($name)
     {
-        return array('name' => $name);
+		return $this->render(
+			"AcmeDemoBundle:Demo:test.html.twig",
+			array(
+				'name' => $name,
+			)
+		);
     }
 
     /**
