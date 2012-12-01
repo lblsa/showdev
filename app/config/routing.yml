@@ -2,3 +2,22 @@
 #_internal:
 #    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
 #    prefix:   /_internal
+company:
+   pattern:   /site/company/
+   defaults:  { _controller: AcmeSiteBundle:Site:company }
+   
+index:
+   pattern:   /site/index/
+   defaults:  { _controller: AcmeSiteBundle:Site:index }
+   
+contacts:
+   pattern:   /site/contacts/
+   defaults:  { _controller: AcmeSiteBundle:Site:contacts }   
+   
+welcome_index:
+   pattern:   /
+   defaults:  { _controller: AcmeWelcomeBundle:Welcome:index }  
+   
+welcome_success:
+   pattern:   /
+   defaults:  { _controller: AcmeWelcomeBundle:Welcome:success }
