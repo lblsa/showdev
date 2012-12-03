@@ -16,8 +16,8 @@ contacts:
    
 welcome_index:
    pattern:   /
-   defaults:  { _controller: AcmeWelcomeBundle:Welcome:index }  
+   defaults:  { _controller: AcmeDemoBundle:Welcome:index }  
    
 welcome_success:
-   pattern:   /
-   defaults:  { _controller: AcmeWelcomeBundle:Welcome:success }
+   pattern:   /welcome/success
+   defaults:  { _controller: AcmeDemoBundle:Welcome:success }
