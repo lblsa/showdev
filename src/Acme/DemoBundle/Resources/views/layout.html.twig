@@ -13,38 +13,64 @@
     <body>
         <div id="symfony-wrapper">
             <div id="symfony-header">
-                <a href="{{ path('_welcome') }}">
-                    <img src="{{ asset('bundles/acmedemo/images/logo.gif') }}" alt="Symfony logo" />
-                </a>
-				<ul class="main_menu">
-					<li class="active"><a href="{{path('welcome_success')}}">Главная</a></li>
-					<li><a href="{{path('company')}}">О нас</a></li>
-					<li><a href="{{path('contacts')}}">Контакты</a></li>
-				</ul>
-				
-				<script type="text/javascript">
-					$('ul li').each(function(i){
-						$(this).attr('class', '');
-						{% if route == '_welcome' %}
-							if($(this).index()==0)
-								$(this).attr('class', 'active');
-						{% endif %}
-						{% if route == 'company' %}
-							if($(this).index()==1)
-								$(this).attr('class', 'active');
-						{% endif %}
-						{% if route == 'contacts' %}
-							if($(this).index()==2)
-								$(this).attr('class', 'active');
-						{% endif %}
-					});
-				</script>
-				
-                {#<form id="symfony-search" method="GET" action="http://symfony.com/search">
-                    <label for="symfony-search-field"><span>Search on Symfony Website</span></label>
-                    <input name="q" id="symfony-search-field" type="search" placeholder="Search on Symfony website" class="medium_txt" />
-                    <input type="submit" class="symfony-button-grey" value="OK" />
-                </form>#}
+				<table style="width: 100%;">
+					<tr>
+						<td rowspan="2">
+							<a href="{{ path('_welcome') }}">
+								<img src="{{ asset('bundles/acmedemo/images/logo.gif') }}" alt="Symfony logo" />
+							</a>
+						</td>
+						<td>
+							<ul class="lang">
+								<li class="active">
+									<a href=''>ru</a>
+								</li>
+								<li>
+									<a href=''>en</a>
+								</li>
+							</ul>
+							<script type="text/javascript">
+								$('ul.lang li').each(function(i){
+									$(this).attr('class', '');
+									{% if lang == 'ru' %}
+										if($(this).index()==0)
+											$(this).attr('class', 'active');
+									{% endif %}
+									{% if lang == 'en' %}
+										if($(this).index()==1)
+											$(this).attr('class', 'active');
+									{% endif %}
+								});
+							</script
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<ul class="main_menu">
+								<li class="active"><a href="{{path('welcome_index', { 'lang': lang })}}">{{translate.t('Главная')}}</a></li>
+								<li><a href="{{path('company', { 'lang': lang })}}">{{translate.t('О нас')}}</a></li>
+								<li><a href="{{path('contacts', { 'lang': lang })}}">{{translate.t('Контакты')}}</a></li>
+							</ul>
+							<script type="text/javascript">
+								$('ul.main_menu li').each(function(i){
+									$(this).attr('class', '');
+									{% if route == 'welcome_index' %}
+										if($(this).index()==0)
+											$(this).attr('class', 'active');
+									{% endif %}
+									{% if route == 'company' %}
+										if($(this).index()==1)
+											$(this).attr('class', 'active');
+									{% endif %}
+									{% if route == 'contacts' %}
+										if($(this).index()==2)
+											$(this).attr('class', 'active');
+									{% endif %}
+								});
+							</script>
+						</td>
+					</tr>
+				</table>
             </div>
 
             {% for flashMessage in app.session.flashbag.get('notice') %}

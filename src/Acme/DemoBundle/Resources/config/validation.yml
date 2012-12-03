@@ -1,4 +1,4 @@
-Acme\DemoBundle\Entity\SignUp:
+Acme\DemoBundle\Entity\User:
     properties:
         mail:
             - Email: { message: "Данные не являются e-mail адресом!" }

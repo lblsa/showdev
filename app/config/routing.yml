@@ -3,21 +3,21 @@
 #    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
 #    prefix:   /_internal
 company:
-   pattern:   /site/company/
-   defaults:  { _controller: AcmeSiteBundle:Site:company }
+   pattern:   /{lang}/site/company
+   defaults:  { _controller: AcmeSiteBundle:Site:company, lang = ru }
    
 index:
-   pattern:   /site/index/
-   defaults:  { _controller: AcmeSiteBundle:Site:index }
+   pattern:   /{lang}/site/index
+   defaults:  { _controller: AcmeSiteBundle:Site:index, lang = ru }
    
 contacts:
-   pattern:   /site/contacts/
-   defaults:  { _controller: AcmeSiteBundle:Site:contacts }   
+   pattern:   /{lang}/site/contacts
+   defaults:  { _controller: AcmeSiteBundle:Site:contacts, lang = ru}   
    
 welcome_index:
-   pattern:   /
-   defaults:  { _controller: AcmeDemoBundle:Welcome:index }  
+   pattern:   /{lang}/
+   defaults:  { _controller: AcmeDemoBundle:Welcome:index, lang = ru }  
    
 welcome_success:
-   pattern:   /welcome/success
-   defaults:  { _controller: AcmeDemoBundle:Welcome:success }
+   pattern:   /{lang}/welcome/success
+   defaults:  { _controller: AcmeDemoBundle:Welcome:success, lang = ru }
