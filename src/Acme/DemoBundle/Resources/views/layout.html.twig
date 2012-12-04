@@ -23,10 +23,10 @@
 						<td>
 							<ul class="lang">
 								<li class="active">
-									<a href=''>ru</a>
+									<a href="{{path(route, { 'lang': 'ru' })}}">ru</a>
 								</li>
 								<li>
-									<a href=''>en</a>
+									<a href="{{path(route, { 'lang': 'en' })}}">en</a>
 								</li>
 							</ul>
 							<script type="text/javascript">
@@ -41,7 +41,7 @@
 											$(this).attr('class', 'active');
 									{% endif %}
 								});
-							</script
+							</script>
 						</td>
 					</tr>
 					<tr>

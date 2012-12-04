@@ -19,11 +19,6 @@ class User
 	* @ORM\Column(type="string", length=200)
 	*/
 	protected $mail;
-
-	/**
-	* @ORM\Column(type="integer", length=12)
-	*/
-	protected $phone;
 	
 	public function getMail()
     {
@@ -32,14 +27,6 @@ class User
     public function setMail($mail)
     {
         $this->mail = $mail;
-    }
-    public function getPhone()
-    {
-        return $this->phone;
-    }
-    public function setPhone($phone)
-    {
-        $this->phone = $phone;
     }
 }
 

@@ -4,20 +4,20 @@
 #    prefix:   /_internal
 company:
    pattern:   /{lang}/site/company
-   defaults:  { _controller: AcmeSiteBundle:Site:company, lang = ru }
+   defaults:  { _controller: AcmeSiteBundle:Site:company, lang ru }
    
 index:
    pattern:   /{lang}/site/index
-   defaults:  { _controller: AcmeSiteBundle:Site:index, lang = ru }
+   defaults:  { _controller: AcmeSiteBundle:Site:index, lang ru }
    
 contacts:
    pattern:   /{lang}/site/contacts
-   defaults:  { _controller: AcmeSiteBundle:Site:contacts, lang = ru}   
+   defaults:  { _controller: AcmeSiteBundle:Site:contacts, lang ru }   
    
 welcome_index:
    pattern:   /{lang}/
-   defaults:  { _controller: AcmeDemoBundle:Welcome:index, lang = ru }  
+   defaults:  { _controller: AcmeDemoBundle:Welcome:index, lang ru }  
    
 welcome_success:
    pattern:   /{lang}/welcome/success
-   defaults:  { _controller: AcmeDemoBundle:Welcome:success, lang = ru }
+   defaults:  { _controller: AcmeDemoBundle:Welcome:success, lang ru }
