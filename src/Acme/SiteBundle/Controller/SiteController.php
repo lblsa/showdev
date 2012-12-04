@@ -25,10 +25,16 @@ class SiteController extends Controller
         $route = $this->getRequest()->attributes->get('_route');
 		$translate = new Translator($lang);
 		
+		$repository = $this->getDoctrine()->getRepository('AcmeSiteBundle:Translate');
+		$data = $repository->findOneBy(array('part' => 'company'));	
+		
+		$content = $data->getContent($lang);
+		
 		return $this->render('AcmeSiteBundle:Site:company.html.twig', array(
 			'route' => $route, 
 			'translate' => $translate,
 			'lang' => $lang,
+			'content' => $content,
 		));
     }
 	
@@ -37,10 +43,16 @@ class SiteController extends Controller
         $route = $this->getRequest()->attributes->get('_route');
 		$translate = new Translator($lang);
 		
+		$repository = $this->getDoctrine()->getRepository('AcmeSiteBundle:Translate');
+		$data = $repository->findOneBy(array('part' => 'contacts'));	
+		
+		$content = $data->getContent($lang);
+		
 		return $this->render('AcmeSiteBundle:Site:contacts.html.twig', array(
 			'route' => $route, 
 			'translate' => $translate,
 			'lang' => $lang,
+			'content' => $content,
 		));
     }
 }

@@ -7,3 +7,11 @@
 Данные не являются e-mail адресом!=The input data is not e-mail address!
 Пользователь с таким e-mail уже существует!=Account already exists for your email address!
 Вам следует ввести свой e-mail!=You need to enter your e-mail!
+Проблема=Problem
+Решение=Solution
+Продажи=Marketing/Sales
+Этапы=Milestones
+Конкуренция=Competition
+Бизнес-модель=Business model
+Финансирование=Financing
+Команда=Team

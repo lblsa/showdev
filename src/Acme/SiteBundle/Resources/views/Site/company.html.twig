@@ -5,7 +5,33 @@
 {% block content_header '' %}
 {% block content %}
 <h1>{{translate.t('О нас')}}</h1>
-<div>
-умный текст
+<ul class="about_ul">
+	<li>
+		<a href="{{path('company', { 'lang': lang })}}#problem">{{translate.t('Проблема')}}</a>
+	</li>
+	<li>
+		<a href="{{path('company', { 'lang': lang })}}#solution">{{translate.t('Решение')}}</a>
+	</li>
+	<li>
+		<a href="{{path('company', { 'lang': lang })}}#sales">{{translate.t('Продажи')}}</a>
+	</li>
+	<li>
+		<a href="{{path('company', { 'lang': lang })}}#milestones">{{translate.t('Этапы')}}</a>
+	</li>
+	<li>
+		<a href="{{path('company', { 'lang': lang })}}#competition">{{translate.t('Конкуренция')}}</a>
+	</li>
+	<li>
+		<a href="{{path('company', { 'lang': lang })}}#business">{{translate.t('Бизнес-модель')}}</a>
+	</li>
+	<li>
+		<a href="{{path('company', { 'lang': lang })}}#financing">{{translate.t('Финансирование')}}</a>
+	</li>
+	<li>
+		<a href="{{path('company', { 'lang': lang })}}#team">{{translate.t('Команда')}}</a>
+	</li>
+</ul>
+<div class="about">
+{{content|raw}}
 </div>
 {% endblock %}
