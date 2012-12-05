@@ -4,8 +4,8 @@
 
 {% block content_header '' %}
 {% block content %}
-<h1>Контакты</h1>
-<div>
-умный текст
+<h1>{{translate.t('Контакты')}}</h1>
+<div style="text-align: center;">
+{{content|raw}}
 </div>
 {% endblock %}
