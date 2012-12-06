@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class WelcomeController extends Controller
 {
-    public function indexAction(Request $request, $lang)
+    public function indexAction(Request $request, $lang='ru')
     {
 		$translate = new Translator($lang);
 
