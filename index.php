@@ -63,7 +63,7 @@ if($_POST['submit']) {
               <li><a href="#team" data-section="#team">Team</a></li>
               <li><a href="#portfolio" data-section="#portfolio">Portfolio&nbsp;&nbsp;</a></li>
               <li><a href="#contact" data-section="#contact">Contact</a></li>
-              <li><a href="/ru" class="btn-inverse">Rus</a></li>
+              <!--<li><a href="/ru" class="btn-inverse">Rus</a></li>-->
             </ul>
           </div>
         </div>
