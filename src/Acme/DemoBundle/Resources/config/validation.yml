@@ -1,5 +1,0 @@
-Acme\DemoBundle\Entity\User:
-    properties:
-        mail:
-            - Email: { message: "1" }
-            - NotBlank: ~
