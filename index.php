@@ -8,7 +8,7 @@ if($_POST['submit']) {
     // $from - от кого 
     $from='showdev@gmail.com'; 
 
-    if(preg_match('/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/', $_POST['email'])) {
+    if(1 || preg_match('/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/', $_POST['email'])) {
       if (mail($to, $title, $mess, 'From:'.$from)) {
         $message =  '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button>'.
                     '&nbsp;&nbsp;Sent successfully</div>';
@@ -75,13 +75,16 @@ if($_POST['submit']) {
         <h1>We build tech prototypes</h1>
         <div id="myCarousel" class="carousel slide">
           <div class="carousel-inner">
-            <div class="active item"><img src="/showdev/img/ShowDev_4.jpg" alt="slide1" /></div>
-            <div class="item"><img src="/showdev/img/ShowDev_5.jpg" width="900" alt="slide2" /></div>
-            <div class="item"><img src="/showdev/img/ShowDev_6.jpg" width="900" alt="slide3" /></div>
-            <div class="item"><img src="/showdev/img/ShowDev_7.jpg" width="900" alt="slide4" /></div>
-            <div class="item"><img src="/showdev/img/ShowDev_8.jpg" width="900" alt="slide5" /></div>
-            <div class="item"><img src="/showdev/img/ShowDev_9.jpg" width="900" alt="slide6" /></div>
-            <div class="item"><img src="/showdev/img/ShowDev_10.jpg" width="900" alt="slide7" /></div>
+            <div class="active item"><img src="/showdev/img/ShowDev_1.jpg"  width="900" alt="slide1" /></div>
+            <div class="item"><img src="/showdev/img/ShowDev_2.jpg" width="900" alt="slide2" /></div>
+            <div class="item"><img src="/showdev/img/ShowDev_3.jpg" width="900" alt="slide3" /></div>
+            <div class="item"><img src="/showdev/img/ShowDev_4.jpg" width="900" alt="slide4" /></div>
+            <div class="item"><img src="/showdev/img/ShowDev_5.jpg" width="900" alt="slide5" /></div>
+            <div class="item"><img src="/showdev/img/ShowDev_6.jpg" width="900" alt="slide6" /></div>
+            <div class="item"><img src="/showdev/img/ShowDev_7.jpg" width="900" alt="slide7" /></div>
+            <div class="item"><img src="/showdev/img/ShowDev_8.jpg" width="900" alt="slide8" /></div>
+            <div class="item"><img src="/showdev/img/ShowDev_9.jpg" width="900" alt="slide9" /></div>
+            <div class="item"><img src="/showdev/img/ShowDev_10.jpg" width="900" alt="slide10" /></div>
           </div>
           <!-- Carousel nav -->
           <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
@@ -93,8 +96,8 @@ if($_POST['submit']) {
         <div class="row-fluid marketing" id="contact">
           <div class="form-inline email_form">
             <form action="" method="POST">
-              <input class="span6" id="appendedInputButton" type="email" name="email" placeholder="email-example@site.com" />
-              <input type="submit" class="btn btn-large" value="You will get a response!" name="submit" />
+              <textarea class="span8" id="appendedInputButton" type="email" name="email" placeholder="State your need, your contacts"></textarea><br>
+              <input type="submit" class="btn span8" value="You will get a response!" name="submit" />
             </form>
             <?php if($_POST['submit']) { echo $message; } ?>
           </div>
@@ -241,7 +244,9 @@ Education: Graduate in Engineering from Bauman Moscow State Technical University
 <script>
 $(function () {
 
-    //Cufon.replace('h1');
+    $('.carousel').carousel({
+      interval: 2000
+    })
 
     $(window).scroll(function(){
         // add navbar opacity on scroll

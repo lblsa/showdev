@@ -957,7 +957,7 @@ body {
 }
 #myCarousel {
 	width: 600px;
-	margin: 0 auto;
+	margin: 10px auto;
 }
 /* Custom container */
 .container-narrow {
@@ -1089,6 +1089,13 @@ margin-top: 28px;
 	margin: 0;
 	padding: 0;
 	margin-top:-5px;
+}
+#appendedInputButton {
+	text-align: center;
+	padding:10px;
+	font-size: 20px;
+	height: 45px;
+	margin-bottom: 10px;
 }
 
 
