@@ -279,4 +279,14 @@ $(function () {
         return false;
     });
 });
-</script></body></html>
+</script>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-4220754215495930";
+/* showdev.ru */
+google_ad_slot = "1003666401";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</body></html>
